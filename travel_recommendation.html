@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="travel_recommendation.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-plane"></i>
+                    <span>TravelBloom</span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="travel_recommendation.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about_us.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact_us.html" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                </ul>
+                
+                <div class="search-section">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Enter keyword (beach, temple, country)">
+                        <button id="searchButton" class="search-btn">Search</button>
+                        <button id="resetButton" class="reset-btn">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <section class="hero-section">
+                <h1 class="hero-title">EXPLORE DREAM<br>DESTINATION</h1>
+                <p class="hero-description">
+                    It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, 
+                    while pursuing the desired destination that captivates the heart and ignites a sense of wonder.
+                </p>
+                <button class="book-now-btn" id="bookNowBtn">BOOK NOW</button>
+            </section>
+            
+            <!-- Search Results Section -->
+            <section class="search-results" id="searchResults">
+                <h2 class="results-title">Search Results</h2>
+                <div class="results-container" id="resultsContainer">
+                    <!-- Results will be populated here by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>

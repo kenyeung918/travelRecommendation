@@ -1,0 +1,475 @@
+/* travel_recommendation.css - TravelBloom Website */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Common Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(78, 205, 196, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #4ecdc4;
+}
+
+.logo i {
+    font-size: 28px;
+    color: #ff6b6b;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #f0f8ff;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(78, 205, 196, 0.1);
+    color: #4ecdc4;
+}
+
+.nav-link.active {
+    background: rgba(78, 205, 196, 0.2);
+    color: #4ecdc4;
+}
+
+/* Search Section */
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 50px;
+    border: 2px solid rgba(78, 205, 196, 0.3);
+}
+
+#searchInput {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 5px;
+    width: 150px;
+    outline: none;
+}
+
+#searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-btn, .reset-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.search-btn {
+    background: linear-gradient(135deg, #4ecdc4, #56e6d9);
+    color: #0a1f2e;
+}
+
+.search-btn:hover {
+    background: linear-gradient(135deg, #56e6d9, #4ecdc4);
+    transform: translateY(-2px);
+}
+
+.reset-btn {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+    border: 2px solid rgba(255, 107, 107, 0.3);
+}
+
+.reset-btn:hover {
+    background: rgba(255, 107, 107, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Home Page Styles */
+.main-content {
+    margin-top: 80px;
+    padding: 60px 0;
+    min-height: calc(100vh - 80px);
+    background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.9)), 
+                url('./Photo/cairo.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #4ecdc4, #ff6b6b, #ffe66d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #e6f7ff;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.book-now-btn {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: white;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+}
+
+.book-now-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
+}
+
+/* Search Results Section */
+.search-results {
+    margin-top: 60px;
+    display: none;
+}
+
+.search-results.active {
+    display: block;
+}
+
+.results-title {
+    font-size: 32px;
+    color: #4ecdc4;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.result-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(78, 205, 196, 0.2);
+}
+
+.result-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: #4ecdc4;
+}
+
+.result-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.result-content {
+    padding: 20px;
+}
+
+.result-card h3 {
+    color: #ffe66d;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.result-card p {
+    color: #c2e0ff;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.visit-btn {
+    background: linear-gradient(135deg, #4ecdc4, #56e6d9);
+    color: #0a1f2e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.visit-btn:hover {
+    background: linear-gradient(135deg, #56e6d9, #4ecdc4);
+    transform: translateY(-2px);
+}
+
+/* About Us Page Styles */
+.about-content {
+    padding: 100px 0;
+    background: rgba(10, 25, 35, 0.95);
+    min-height: 100vh;
+}
+
+.about-title {
+    font-size: 36px;
+    color: #4ecdc4;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.about-text {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(78, 205, 196, 0.2);
+    margin-bottom: 60px;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #e6f7ff;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.team-section {
+    margin-top: 60px;
+}
+
+.team-title {
+    font-size: 32px;
+    color: #ffe66d;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(78, 205, 196, 0.2);
+    text-align: center;
+}
+
+.team-member h3 {
+    color: #ffe66d;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.team-member .role {
+    color: #4ecdc4;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.team-member .description {
+    color: #c2e0ff;
+    line-height: 1.6;
+}
+
+/* Contact Us Page Styles */
+.contact-content {
+    padding: 100px 0;
+    background: rgba(15, 30, 45, 0.95);
+    min-height: 100vh;
+}
+
+.contact-title {
+    font-size: 36px;
+    color: #4ecdc4;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.contact-subtitle {
+    font-size: 18px;
+    color: #e6f7ff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(78, 205, 196, 0.2);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    color: #4ecdc4;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4ecdc4;
+    box-shadow: 0 0 15px rgba(78, 205, 196, 0.3);
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #4ecdc4, #56e6d9);
+    color: #0a1f2e;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #56e6d9, #4ecdc4);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(78, 205, 196, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .search-box {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    #searchInput {
+        width: 100%;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .about-title, .contact-title {
+        font-size: 28px;
+    }
+    
+    .results-container, .team-members {
+        grid-template-columns: 1fr;
+    }
+}
